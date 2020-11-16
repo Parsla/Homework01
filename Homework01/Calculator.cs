@@ -18,7 +18,26 @@ namespace Homework01
             string userInput3 = Console.ReadLine();
             char z = Convert.ToChar(userInput3);
 
-            if (z == '+')
+            switch (z)
+            {
+                case '+':
+                    Console.WriteLine(x + " + " + y + " = " + (Utils.Add(x, y)));
+                    break;
+                case '-':
+                    Console.WriteLine(x + " - " + y + " = " + (Utils.Subtract(x, y)));
+                    break;
+                case '/':
+                    Console.WriteLine(x + " / " + y + " = " + (Utils.Division(x, y)));
+                    break;
+                case '*':
+                    Console.WriteLine(x + " * " + y + " = " + (Utils.Multiply(x, y)));
+                    break;
+                default:
+                    Console.WriteLine("Ievadītā aritmētiskā operācija neatbilst prasītajai!");
+                    break;
+            }
+
+            /*if (z == '+')
             {
                 Console.WriteLine(x + " + " + y + " = " + (Utils.Add(x, y)));
             }
@@ -37,7 +56,7 @@ namespace Homework01
             else
             {
                 Console.WriteLine("Ievadītā aritmētiskā operācija neatbilst prasītajai!");
-            }
+            }*/
         }
     }
 }
